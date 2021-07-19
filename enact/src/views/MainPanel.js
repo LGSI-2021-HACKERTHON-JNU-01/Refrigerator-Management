@@ -7,8 +7,9 @@ const MainPanel = kind({
 
 	render: (props) => (
 		<Panel {...props}>
-			<Header title="Hello world!" />
-			<Button>Click me</Button>
+			<Header title="Refrigerator-Management" />
+			<Button>Scan</Button>
+
 		</Panel>
 	)
 });
