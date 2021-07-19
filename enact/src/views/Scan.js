@@ -26,10 +26,7 @@ const MainPanel = kind({
 				btnName="Recipe"
 				// btnAction={}
 			/>
-			<CreateButton
-				btnName="Calendar"
-				// btnAction={}
-			/>
+		/
 		</Panel>
 	)
 });
