@@ -9,14 +9,14 @@ const MainPanel = kind({
 	render: (props) => (
 		<Panel {...props}>
 			<Header title="Refrigerator Management" />
-			
+
 			<CreateButton
 				btnName="Scan"
 				// btnAction={}
 			/>
 			<CreateButton
 				btnName="List"
-				// btnAction={}	
+				// btnAction={}
 			/>
 			<CreateButton
 				btnName="Timer"
