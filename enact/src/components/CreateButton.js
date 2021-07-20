@@ -1,14 +1,14 @@
 // import React from 'react';
 import Button from '@enact/sandstone/Button';
+import { withRouter } from 'react-router';
+const CreateButton = ({btnName, btnAction}) => {
 
-const CreateButton = ({btnName, btnAddress}) => {
-    console.log(btnAddress);
     return (
         <div>
             <Button
                 backgroundOpacity="transparent"
                 color="blue"
-                onClick={btnAddress}
+                // onClick={PageHandle(btnAction)}
             >
             {btnName}
             </Button>
@@ -16,4 +16,4 @@ const CreateButton = ({btnName, btnAddress}) => {
     );
 };
 
-export default CreateButton;
+export default withRouter(CreateButton);
