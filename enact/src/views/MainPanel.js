@@ -1,7 +1,7 @@
 // import React from 'react';
-import {  Router } from 'react-router-dom';
+import { Router } from 'react-router-dom';
 import kind from '@enact/core/kind';
-import {Panel, Header} from '@enact/sandstone/Panels';
+import { Panel, Header } from '@enact/sandstone/Panels';
 
 import CreateButton from '../components/CreateButton';
 
@@ -10,14 +10,12 @@ const MainPanel = kind({
 
 	render: (props) => (
 		<Panel {...props}>
-			<Router>
-				<Header title="Refrigerator Management" />
-				<CreateButton btnName="Scan" btnAddress="/Scan"/>
-				<CreateButton btnName="List" btnAddress="/List"/>
-				<CreateButton btnName="Timer" btnAddress="/Timer"/>
-				<CreateButton btnName="Recipe" btnAddress="Recipe"/>
-				<CreateButton btnName="Calendar" btnAddress="/Calendar"/>
-			</Router>
+			<Header title="Refrigerator Management" />
+			<CreateButton btnName="Scan" btnAddress="/Scan"/>
+			<CreateButton btnName="List" btnAddress="/List"/>
+			<CreateButton btnName="Timer" btnAddress="/Timer"/>
+			<CreateButton btnName="Recipe" btnAddress="/Recipe"/>
+			<CreateButton btnName="Calendar" btnAddress="/Calendar"/>
 		</Panel>
 	)
 });
