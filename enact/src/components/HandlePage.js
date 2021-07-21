@@ -1,5 +1,5 @@
-const PageHandle = ({ ev, btnAction }) => {
-  window.location.href = { btnAction };
-};
+// const PageHandle = ({ ev, btnAction }) => {
+//   window.location.href = { btnAction };
+// };
 
-export default PageHandle;
+// export default PageHandle;

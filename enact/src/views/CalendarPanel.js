@@ -1,15 +1,15 @@
 import kind from "@enact/core/kind";
 import { Header, Panel } from "@enact/sandstone/Panels";
 
-const ScanTestPanel = kind({
-    name: 'ScanTestPanel',
+const CalendarPanel = kind({
+    name: 'CalendarPanel',
 
     render: (props) => (
         <Panel {...props}>
-            <Header title="Scan Test Panel" />
+            <Header title="Calendar Test Panel" />
         </Panel>
     )
 
 });
 
-export default ScanTestPanel;
+export default CalendarPanel;

@@ -1,8 +1,9 @@
-import React from 'react';
+// import React from 'react';
 import kind from '@enact/core/kind';
-import { Panel, Header } from '@enact/sandstone/Panels';
+import { Panel } from '@enact/sandstone/Panels';
 
-import CreateButton from '../components/CreateButton';
+// import CreateButton from '../components/CreateButton';
+import MainTabLayout from '../components/MainTabLayout';
 //import { Route } from '@enact/ui/Routable';
 
 const MainPanel = kind({
@@ -10,12 +11,7 @@ const MainPanel = kind({
 
 	render: (props) => (
 		<Panel {...props}>
-			<Header title="Refrigerator Management" />
-			<CreateButton btnName="Scan" btnAction="/ScanTest"/>
-			<CreateButton btnName="List" btnAction="/List"/>
-			<CreateButton btnName="Timer" btnAction="/Timer"/>
-			<CreateButton btnName="Recipe" btnAction="/Recipe"/>
-			<CreateButton btnName="Calendar" btnAction="/Calendar"/>
+			<MainTabLayout/>
 		</Panel>
 	)
 });

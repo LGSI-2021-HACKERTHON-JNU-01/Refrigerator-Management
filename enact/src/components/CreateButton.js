@@ -1,14 +1,15 @@
 // import React from 'react';
 import Button from '@enact/sandstone/Button';
-import { withRouter } from 'react-router';
-const CreateButton = ({btnName, btnAction}) => {
+// import PageHandle from './HandlePage';
+// import { withRouter } from 'react-router';
+const CreateButton = ({btnName}) => {
 
     return (
         <div>
             <Button
                 backgroundOpacity="transparent"
                 color="blue"
-                // onClick={PageHandle(btnAction)}
+                onClick={console.log("eventHandlers")}
             >
             {btnName}
             </Button>
@@ -16,4 +17,4 @@ const CreateButton = ({btnName, btnAction}) => {
     );
 };
 
-export default withRouter(CreateButton);
+export default CreateButton;
