@@ -3,7 +3,17 @@
     "prettier": "2.3.2"
   },
   "dependencies": {
+    "eslint": "^7.31.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-prettier": "^3.4.0",
+    "express": "^4.17.1",
+    "expressjs": "^1.0.1",
     "google-auth-library": "^7.3.0",
-    "googleapis": "^82.0.0"
+    "googleapis": "^82.0.0",
+    "mongodb": "^3.6.10",
+    "mongoose": "^5.13.3",
+    "prettier": "2.3.2"
   }
 }
