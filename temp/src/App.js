@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
 
 function App() {
   const [playing, setPlaying] = useState(false);
@@ -8,14 +8,14 @@ function App() {
   const width = 500;
 
   const startVideo = () => {
-    setPlaying(true)
+    setPlaying(true);
     navigator.mediaDevices.getUserMedia(
       {
-        video : true,
+        video: true,
       },
       (stream) => {
         let video = document.getElementsByClassName("app__video")[0];
-        if(video){
+        if (video) {
           video.srcObject = stream;
         }
       },
@@ -23,26 +23,27 @@ function App() {
     );
   };
 
-  const stopVideo = () =>{
+  const stopVideo = () => {
     setPlaying(false);
-    let video = document.getElementsByClassName('app__video')[0];
+    let video = document.getElementsByClassName("app__video")[0];
     video.srcObject.getTracks()[0].stop();
   };
 
   return (
-    <div className = "app">
-      <div className = "app__container">
-        <video 
-          height = {height}
-          width = {width}
+    <div className="app">
+      <div className="app__container">
+        <video
+          height={height}
+          width={width}
           muted
           autoPlay
-          className = "app__video"></video>
+          className="app__video"
+        ></video>
       </div>
-      <div className = "app__input">
+      <div className="app__input">
         {playing ? (
           <button onClick={stopVideo}>Stop</button>
-        ): (
+        ) : (
           <button onClick={startVideo}>Start</button>
         )}
       </div>

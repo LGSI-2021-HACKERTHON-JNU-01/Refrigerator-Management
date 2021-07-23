@@ -4,11 +4,11 @@
 
 .app__container {
   margin-top: 10px;
-  width:1000px;
-  height:400px;
-  border : 1px solid #000;
+  width: 1000px;
+  height: 400px;
+  border: 1px solid #000;
 }
 
 .app__input {
-  margin-top : 100px;
+  margin-top: 100px;
 }
