@@ -1,13 +1,3 @@
-import Webcam from "react-webcam";
-// import { useRef } from "react";
-function App(){
-  return (
-    <div className ="App">
-      <Webcam/>
-    </div>
-  );
-}
-export default App;
 // import Webcam from "react-webcam";
 // // import { useRef } from "react";
 // function App(){
@@ -25,7 +15,7 @@ import Button from "@enact/sandstone/Button"
 
 import "./ScanPanel.css";
 
-function App() {
+function ScanPanel() {
   const [camera, setCamera] = useState(false);
   const [result, setResult] = useState(null);
 
@@ -48,6 +38,6 @@ function App() {
 }
 
 const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
-export default App;
+ReactDOM.render(<ScanPanel />, rootElement);
+export default ScanPanel;
 
