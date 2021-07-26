@@ -1,5 +1,7 @@
 import express from "express";
-import { createData, getData, deleteData } from "../controllers/ControllData";
+import createData from "../controllers/CreateData";
+import getData from "../controllers/GetData";
+import deleteData from "../controllers/DeleteData";
 
 const router = express.Router();
 

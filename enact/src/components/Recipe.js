@@ -1,5 +1,6 @@
-import React, { useState } from "react";
-import RecipeDetails from "./RecipeDetails";
+// eslint-disable-next-line
+import React, { useState } from 'react';
+import RecipeDetails from './RecipeDetails';
 
 const Recipe = ({ recipe }) => {
   const [show, setShow] = useState(false);
@@ -12,6 +13,7 @@ const Recipe = ({ recipe }) => {
       <a href={url} target="_blank" rel="noopener noreferrer">
         URL
       </a>
+      {/* eslint-disable-next-line */}
       <button onClick={() => setShow(!show)}>Ingredients</button>
       {show && <RecipeDetails ingredients={ingredients} />}
     </div>
