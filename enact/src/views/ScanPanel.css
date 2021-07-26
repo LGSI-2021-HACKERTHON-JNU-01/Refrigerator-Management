@@ -1,0 +1,35 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  /* height: 600px;
+  width: 1000px; */
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+} 
+
+.container {
+  position: relative;
+}
+.container,
+#interactive.viewport {
+  width: 2000px;
+  height: 2000px;
+  margin: 0;
+  padding: 0;
+}
+
+#interactive.viewport canvas,
+video {
+  width: 2000px;
+  height: 2000px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#interactive.viewport canvas.drawingBuffer,
+video.drawingBuffer {
+  width: 2000px;
+  height: 2000px;
+}
