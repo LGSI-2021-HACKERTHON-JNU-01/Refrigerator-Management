@@ -4,7 +4,7 @@
 - Back-End : nodeJS
 - webapp for webOS
 ***
-# Functions
+## Functions
 [] Register the expiration by scanning the barcode
 [] Sort list in descending order and alert
 [] Recipe recommendationa based on the list
