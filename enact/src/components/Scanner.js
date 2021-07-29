@@ -18,6 +18,8 @@ const Scanner = props => {
 
     //detecting boxes on stream
     Quagga.onProcessed(result => {
+      //wait for 1000
+      setTimeout(1000);
       var drawingCtx = Quagga.canvas.ctx.overlay,
         drawingCanvas = Quagga.canvas.dom.overlay;
 
@@ -47,7 +49,6 @@ const Scanner = props => {
             lineWidth: 2
           });
         }
-
         if (result.codeResult && result.codeResult.code) {
           Quagga.ImageDebug.drawPath(
             result.line,
