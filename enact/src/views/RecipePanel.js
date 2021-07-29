@@ -6,10 +6,12 @@ import Axios from 'axios';
 // eslint-disable-next-line
 import { v4 as uuidv4 } from 'react';
 // eslint-disable-next-line
-import Recipe from '../components/Recipe';
+//import Recipe from '../components/Recipe';
 import RecipeDetails from '../components/RecipeDetails';
 import Alert from '../components/Alert';
 import Scroller from '@enact/sandstone/Scroller';
+import RandomMeal from '../components/Random';
+import Meal from '../components/Meal';
 
 function App() {
   const [query, setQuery] = useState('');
@@ -43,9 +45,22 @@ function App() {
     getData();
   };
 
+  const onScrollStop = ({scrollBottom, scrollTop}) => {
+    // do something with scrollBottom and scrollTop
+  }
+
+
   return (
     <Scroller>
+      
       <div className="App">
+        <div className="recommend">
+          <h1>Recommend Recipe</h1>
+            <div className="one"><RandomMeal /></div>
+            <div className="two"><RandomMeal /></div>
+            <div className="three"><RandomMeal /></div>
+        </div>
+        <div className="mar"/>
         <h1>Search Recipe</h1>
         {/* eslint-disable-next-line */}
         <form onSubmit={onSubmit} className="search-form">
@@ -61,6 +76,7 @@ function App() {
           />
           <input type="submit" value="Search" />
         </form>
+        <div className="ma"/>
         <div className="recipes">
           {recipes.map(recipe => (
             <RecipeDetails
