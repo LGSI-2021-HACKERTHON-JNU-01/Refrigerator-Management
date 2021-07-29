@@ -52,15 +52,13 @@ function App() {
 
   return (
     <Scroller>
-      
-      <div className="App">
-        <div className="recommend">
+      <div className="App1">
+        <div>
           <h1>Recommend Recipe</h1>
             <div className="one"><RandomMeal /></div>
             <div className="two"><RandomMeal /></div>
             <div className="three"><RandomMeal /></div>
         </div>
-        <div className="mar"/>
         <h1>Search Recipe</h1>
         {/* eslint-disable-next-line */}
         <form onSubmit={onSubmit} className="search-form">
@@ -76,7 +74,6 @@ function App() {
           />
           <input type="submit" value="Search" />
         </form>
-        <div className="ma"/>
         <div className="recipes">
           {recipes.map(recipe => (
             <RecipeDetails
