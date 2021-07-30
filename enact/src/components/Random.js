@@ -18,7 +18,7 @@ const RandomMeal = () => {
     if (!meal) return null;
 
     return (
-        <section className="container">
+        <section className="container1">
             <Meal meal={meal}/>
         </section>
     )
