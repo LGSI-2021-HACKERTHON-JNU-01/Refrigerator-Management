@@ -1,7 +1,8 @@
 import { doc, deleteDoc } from 'firebase/firestore';
+import db from './Firebase';
 
 const DeleteData = ingredientName => {
-  await deleteDoc(doc(db, 'data', ingredientName));
+  deleteDoc(doc(db, 'data', ingredientName));
 };
 
 export default DeleteData;

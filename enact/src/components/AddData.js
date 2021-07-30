@@ -1,7 +1,8 @@
 import { addDoc, Timestamp, Collection } from 'firebase/firestore';
+import db from './Firebase';
 
 const AddData = ({ ingredientName, ingredientNumber }) => {
-  const docData = await addDoc(Collection(db, 'data', ingredientName), {
+  addDoc(Collection(db, 'data', ingredientName), {
     name: ingredientName,
     number: ingredientNumber,
     deliveryTime: Timestamp.now(),

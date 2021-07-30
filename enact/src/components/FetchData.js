@@ -1,8 +1,9 @@
-import { doc, getDoc } from 'firebase/firestore';
+import firebase from 'firebase';
+import db from './Firebase';
 
 const FetchData = () => {
-  const docRef = doc(db, 'data');
-  const docSnap = await getDoc(docRef);
+  const docRef = firebase.doc(db, 'data');
+  const docSnap = firebase.getDoc(docRef);
 
   if (docSnap.exists()) {
     console.log('Document data:', docSnap.data());

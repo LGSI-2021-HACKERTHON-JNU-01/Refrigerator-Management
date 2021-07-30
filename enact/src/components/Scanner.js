@@ -20,16 +20,9 @@ const Scanner = props => {
     //detecting boxes on stream
     Quagga.onProcessed(result => {
       const drawingCtx = Quagga.canvas.ctx.overlay,
-      //wait for 1000
-<<<<<<< HEAD
-      // eslint-disable-next-line
-      setTimeout(1000);
-      var drawingCtx = Quagga.canvas.ctx.overlay,
+        //wait for 1000
+        // setTimeout(1000);
         drawingCanvas = Quagga.canvas.dom.overlay;
-=======
-      // setTimeout(1000);
-      drawingCanvas = Quagga.canvas.dom.overlay;
->>>>>>> 65c85a53d4d1ff1feb29d95b104621841c7fedb2
 
       if (result) {
         if (result.boxes) {

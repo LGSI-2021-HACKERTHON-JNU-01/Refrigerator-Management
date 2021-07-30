@@ -1,4 +1,5 @@
 import { doc, addDoc, Timestamp } from 'firebase/firestore';
+import db from './Firebase';
 
 const docData = {
   name: 'carrot',
@@ -7,4 +8,4 @@ const docData = {
   shelfLife: Timestamp.fromDate(new Date('August 30, 2021')),
 };
 
-await addDoc(doc(db, 'data'), docData);
+addDoc(doc(db, 'data'), docData);
