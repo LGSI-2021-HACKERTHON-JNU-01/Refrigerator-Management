@@ -33,21 +33,29 @@
     "dist/*"
   ],
   "dependencies": {
+    "@angular/common": "^12.1.4",
+    "@angular/core": "^12.1.4",
+    "@angular/fire": "^6.1.5",
+    "@angular/material": "^12.1.4",
+    "@emotion/react": "^11.4.0",
     "@enact/core": "^4.0.0",
     "@enact/i18n": "^4.0.0",
     "@enact/sandstone": "^2.0.0-alpha.3",
     "@enact/spotlight": "^3.5.0",
     "@enact/ui": "^4.0.0",
     "@enact/webos": "^3.5.0",
+    "@ericz1803/react-google-calendar": "^4.2.1",
     "axios": "^0.21.1",
-    "firebase": "^8.8.0",
+    "firebase": "^8.8.1",
     "ilib": "npm:ilib-webos@^14.6.2-webos1",
     "prop-types": "^15.6.2",
     "quagga": "^0.12.1",
     "react": "^17.0.2",
-    "react-dom": "^17.0.1",
+    "react-dom": "^17.0.2",
+    "react-google-calendar-api": "^1.4.0",
     "react-router-dom": "^5.2.0",
-    "react-webcam": "^5.2.4"
+    "react-webcam": "^5.2.4",
+    "rxjs": "^7.3.0"
   },
   "devDependencies": {
     "eslint": "^7.31.0",

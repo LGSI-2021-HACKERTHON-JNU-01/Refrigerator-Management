@@ -13,7 +13,7 @@ import Scroller from '@enact/sandstone/Scroller';
 import RandomMeal from '../components/Random';
 // eslint-disable-next-line
 import Meal from '../components/Meal';
-
+//import RecommendRecipe from '../components/RecommendRecipe';
 function App() {
   const [query, setQuery] = useState('');
   const [recipes, setRecipes] = useState([]);
@@ -55,6 +55,7 @@ function App() {
       <div className="App1">
         <div>
           <h1>Recommend Recipe</h1>
+          
           <div className="one">
             <RandomMeal />
           </div>
@@ -97,3 +98,4 @@ function App() {
 }
 
 export default App;
+//<div>{RecommendedRecipe()}</div>
