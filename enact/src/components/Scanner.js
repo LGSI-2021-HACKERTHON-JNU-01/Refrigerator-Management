@@ -1,3 +1,4 @@
+{/* eslint-disable-next-line*/}
 import React, { useEffect } from "react";
 import config from "./config.json";
 // import Quagga from "../../../barcodeapi/quagga";
@@ -18,7 +19,9 @@ const Scanner = props => {
     });
     Quagga.onDetected(detected);
     //detecting boxes on stream
+    {/* eslint-disable-next-line*/}
     Quagga.onProcessed(result => {
+       {/* eslint-disable-next-line*/}
       var drawingCtx = Quagga.canvas.ctx.overlay,
         drawingCanvas = Quagga.canvas.dom.overlay;
 
@@ -58,8 +61,14 @@ const Scanner = props => {
         }
       }
     });
+<<<<<<< HEAD
+{/* eslint-disable-next-line*/}
+    Quagga.onDetected(detected);
+{/* eslint-disable-next-line*/}
+=======
 
   // Quagga.onDetected(detected);
+>>>>>>> ef44d984c9c55680de1c47d47ebaa3820a1cd434
   }, []);
 
   const detected = result => {
