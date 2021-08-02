@@ -12,8 +12,10 @@
     "expressjs": "^1.0.1",
     "google-auth-library": "^7.3.0",
     "googleapis": "^82.0.0",
+    "jsonfile": "^6.1.0",
     "mongodb": "^3.6.10",
     "mongoose": "^5.13.3",
-    "prettier": "2.3.2"
+    "prettier": "2.3.2",
+    "s": "^1.0.0"
   }
 }
