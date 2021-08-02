@@ -12,9 +12,14 @@
     "expressjs": "^1.0.1",
     "google-auth-library": "^7.3.0",
     "googleapis": "^82.0.0",
+    "jsonfile": "^6.1.0",
     "mongodb": "^3.6.10",
     "mongoose": "^5.13.3",
     "prettier": "2.3.2",
+<<<<<<< HEAD
+    "s": "^1.0.0"
+=======
     "react-google-calendar-api": "^1.4.0"
+>>>>>>> 6c6d663d1d00181ab430054569c9ddf6ac4a1a06
   }
 }
