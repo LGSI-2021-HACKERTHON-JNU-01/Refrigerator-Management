@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 // eslint-disable-next-line
 import React, { useEffect } from 'react';
 import config from './config.json';
+=======
+{/* eslint-disable-next-line*/}
+import React, { useEffect } from "react";
+import config from "./config.json";
+>>>>>>> 6c6d663d1d00181ab430054569c9ddf6ac4a1a06
 // import Quagga from "../../../barcodeapi/quagga";
 import Quagga from 'quagga';
 
@@ -20,8 +26,13 @@ const Scanner = props => {
     // eslint-disable-next-line
     Quagga.onDetected(detected);
     //detecting boxes on stream
+    {/* eslint-disable-next-line*/}
     Quagga.onProcessed(result => {
+<<<<<<< HEAD
       // eslint-disable-next-line
+=======
+       {/* eslint-disable-next-line*/}
+>>>>>>> 6c6d663d1d00181ab430054569c9ddf6ac4a1a06
       var drawingCtx = Quagga.canvas.ctx.overlay,
         drawingCanvas = Quagga.canvas.dom.overlay;
 
@@ -61,9 +72,19 @@ const Scanner = props => {
         }
       }
     });
+<<<<<<< HEAD
+{/* eslint-disable-next-line*/}
+    Quagga.onDetected(detected);
+{/* eslint-disable-next-line*/}
+=======
 
+<<<<<<< HEAD
     // Quagga.onDetected(detected);
     // eslint-disable-next-line
+=======
+  // Quagga.onDetected(detected);
+>>>>>>> ef44d984c9c55680de1c47d47ebaa3820a1cd434
+>>>>>>> 6c6d663d1d00181ab430054569c9ddf6ac4a1a06
   }, []);
 
   const detected = result => {
