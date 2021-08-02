@@ -11,10 +11,6 @@ const ListPanel = kind({
     <Panel {...props}>
       <Header title="List Test Panel" />
       <Scroller>
-<<<<<<< HEAD
-=======
-        <BodyText></BodyText>
->>>>>>> 9f2f29bbc590ca0060a596aaf0217be2dc97db24
       </Scroller>
     </Panel>
   ),

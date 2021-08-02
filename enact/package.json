@@ -1,140 +1,69 @@
 {
-<<<<<<< HEAD
-	"name": "enact",
-	"version": "1.0.0",
-	"description": "A general template for an Enact Sandstone application for webOS TVs",
-	"author": "",
-	"main": "src/index.js",
-	"scripts": {
-		"serve": "enact serve",
-		"pack": "enact pack",
-		"pack-p": "enact pack -p",
-		"watch": "enact pack --watch",
-		"clean": "enact clean",
-		"lint": "enact lint .",
-		"license": "enact license",
-		"test": "enact test",
-		"test-watch": "enact test --watch"
-	},
-	"license": "UNLICENSED",
-	"private": true,
-	"repository": "",
-	"engines": {
-		"npm": ">=6.9.0"
-	},
-	"enact": {
-		"theme": "sandstone"
-	},
-	"eslintConfig": {
-		"extends": "enact"
-	},
-	"eslintIgnore": [
-		"node_modules/*",
-		"build/*",
-		"dist/*"
-	],
-	"dependencies": {
-		"@enact/core": "^4.0.0",
-		"@enact/i18n": "^4.0.0",
-		"@enact/sandstone": "^2.0.0-alpha.3",
-		"@enact/spotlight": "^4.0.0",
-		"@enact/ui": "^4.0.0",
-		"@enact/webos": "^4.0.0",
-		"axios": "^0.21.1",
-		"classnames": "^2.3.1",
-		"global": "^4.4.0",
-		"ilib": "npm:ilib-webos@^14.6.2-webos1",
-		"node-sass": "^6.0.1",
-		"open-color": "^1.8.0",
-		"prop-types": "^15.7.2",
-		"quagga": "^0.12.1",
-		"react": "^17.0.2",
-		"react-alert": "^7.0.3",
-		"react-dom": "^17.0.1",
-		"react-router-dom": "^5.2.0",
-		"react-webcam": "^5.2.4"
-	},
-	"devDependencies": {
-		"eslint": "^7.31.0",
-		"eslint-config-airbnb-base": "^14.2.1",
-		"eslint-config-prettier": "^8.3.0",
-		"eslint-plugin-import": "^2.23.4",
-		"eslint-plugin-prettier": "^3.4.0",
-		"prettier": "2.3.2"
-	},
-=======
-
->>>>>>> 9f2f29bbc590ca0060a596aaf0217be2dc97db24
-  "name": "enact",
-  "version": "1.0.0",
-  "description": "A general template for an Enact Sandstone application for webOS TVs",
-  "author": "",
-  "main": "src/index.js",
-  "scripts": {
-    "serve": "enact serve",
-    "pack": "enact pack",
-    "pack-p": "enact pack -p",
-    "watch": "enact pack --watch",
-    "clean": "enact clean",
-    "lint": "enact lint .",
-    "license": "enact license",
-    "test": "enact test",
-    "test-watch": "enact test --watch"
-  },
-  "license": "UNLICENSED",
-  "private": true,
-  "repository": "",
-  "engines": {
-    "npm": ">=6.9.0"
-  },
-  "enact": {
-    "theme": "sandstone"
-  },
-  "eslintConfig": {
-    "extends": "enact"
-  },
-  "eslintIgnore": [
-    "node_modules/*",
-    "build/*",
-    "dist/*"
-  ],
-  "dependencies": {
-    "@angular/common": "^12.1.4",
-    "@angular/core": "^12.1.4",
-    "@angular/fire": "^6.1.5",
-    "@angular/material": "^12.1.4",
-    "@emotion/react": "^11.4.0",
-    "@enact/core": "^4.0.0",
-    "@enact/i18n": "^4.0.0",
-    "@enact/sandstone": "^2.0.0-alpha.3",
-    "@enact/spotlight": "^3.5.0",
-    "@enact/ui": "^4.0.0",
-    "@enact/webos": "^3.5.0",
-    "@ericz1803/react-google-calendar": "^4.2.1",
-    "axios": "^0.21.1",
-    "firebase": "^8.8.1",
-<<<<<<< HEAD
-=======
-
-    "firebase-admin": "^9.11.0",
-
->>>>>>> 9f2f29bbc590ca0060a596aaf0217be2dc97db24
-    "ilib": "npm:ilib-webos@^14.6.2-webos1",
-    "prop-types": "^15.6.2",
-    "quagga": "^0.12.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-google-calendar-api": "^1.4.0",
-    "react-router-dom": "^5.2.0",
-    "react-webcam": "^5.2.4",
-    "rxjs": "^7.3.0"
-  },
-  "devDependencies": {
-    "eslint": "^7.31.0",
-    "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-import": "^2.23.4",
-    "eslint-plugin-prettier": "^3.4.0",
-    "prettier": "2.3.2"
-  }
+ "name": "enact",
+ "version": "1.0.0",
+ "description": "A general template for an Enact Sandstone application for webOS TVs",
+ "author": "",
+ "main": "src/index.js",
+ "scripts": {
+  "serve": "enact serve",
+  "pack": "enact pack",
+  "pack-p": "enact pack -p",
+  "watch": "enact pack --watch",
+  "clean": "enact clean",
+  "lint": "enact lint .",
+  "license": "enact license",
+  "test": "enact test",
+  "test-watch": "enact test --watch"
+ },
+ "license": "UNLICENSED",
+ "private": true,
+ "repository": "",
+ "engines": {
+  "npm": ">=6.9.0"
+ },
+ "enact": {
+  "theme": "sandstone"
+ },
+ "eslintConfig": {
+  "extends": "enact"
+ },
+ "eslintIgnore": [
+  "node_modules/*",
+  "build/*",
+  "dist/*"
+ ],
+ "dependencies": {
+  "@angular/common": "^12.1.4",
+  "@angular/core": "^12.1.4",
+  "@angular/fire": "^6.1.5",
+  "@angular/material": "^12.1.4",
+  "@emotion/react": "^11.4.0",
+  "@enact/core": "^4.0.0",
+  "@enact/i18n": "^4.0.0",
+  "@enact/sandstone": "^2.0.0-alpha.3",
+  "@enact/spotlight": "^3.5.0",
+  "@enact/ui": "^4.0.0",
+  "@enact/webos": "^3.5.0",
+  "@ericz1803/react-google-calendar": "^4.2.1",
+  "axios": "^0.21.1",
+  "firebase": "^8.8.1",
+  "firebase-admin": "^9.11.0",
+  "ilib": "npm:ilib-webos@^14.6.2-webos1",
+  "prop-types": "^15.6.2",
+  "quagga": "^0.12.1",
+  "react": "^17.0.2",
+  "react-dom": "^17.0.2",
+  "react-google-calendar-api": "^1.4.0",
+  "react-router-dom": "^5.2.0",
+  "react-webcam": "^5.2.4",
+  "rxjs": "^7.3.0"
+ },
+ "devDependencies": {
+  "eslint": "^7.31.0",
+  "eslint-config-airbnb-base": "^14.2.1",
+  "eslint-config-prettier": "^8.3.0",
+  "eslint-plugin-import": "^2.23.4",
+  "eslint-plugin-prettier": "^3.4.0",
+  "prettier": "2.3.2"
+ }
 }
