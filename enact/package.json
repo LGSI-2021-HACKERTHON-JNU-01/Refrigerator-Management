@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
 	"name": "enact",
 	"version": "1.0.0",
 	"description": "A general template for an Enact Sandstone application for webOS TVs",
@@ -61,8 +60,7 @@
 		"eslint-plugin-import": "^2.23.4",
 		"eslint-plugin-prettier": "^3.4.0",
 		"prettier": "2.3.2"
-	}
-=======
+	},
   "name": "enact",
   "version": "1.0.0",
   "description": "A general template for an Enact Sandstone application for webOS TVs",
@@ -111,10 +109,6 @@
     "@ericz1803/react-google-calendar": "^4.2.1",
     "axios": "^0.21.1",
     "firebase": "^8.8.1",
-<<<<<<< HEAD
-    "firebase-admin": "^9.11.0",
-=======
->>>>>>> 6c6d663d1d00181ab430054569c9ddf6ac4a1a06
     "ilib": "npm:ilib-webos@^14.6.2-webos1",
     "prop-types": "^15.6.2",
     "quagga": "^0.12.1",
@@ -133,5 +127,4 @@
     "eslint-plugin-prettier": "^3.4.0",
     "prettier": "2.3.2"
   }
->>>>>>> ef44d984c9c55680de1c47d47ebaa3820a1cd434
 }

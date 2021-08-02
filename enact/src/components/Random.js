@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 /* eslint-disable-next-line*/
-=======
 // eslint-disable-next-line
->>>>>>> ef44d984c9c55680de1c47d47ebaa3820a1cd434
 import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
 import Meal from './Meal';
