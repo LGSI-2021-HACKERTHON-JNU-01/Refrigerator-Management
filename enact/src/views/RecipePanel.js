@@ -11,6 +11,7 @@ import RecipeDetails from '../components/RecipeDetails';
 import Alert from '../components/Alert';
 import Scroller from '@enact/sandstone/Scroller';
 import RandomMeal from '../components/Random';
+ /* eslint-disable-next-line*/
 import Meal from '../components/Meal';
 
 function App() {
@@ -44,7 +45,7 @@ function App() {
     e.preventDefault();
     getData();
   };
-
+ /* eslint-disable-next-line*/
   const onScrollStop = ({scrollBottom, scrollTop}) => {
     // do something with scrollBottom and scrollTop
   }
@@ -52,7 +53,7 @@ function App() {
 
   return (
     <Scroller>
-      
+
       <div className="App">
         <div className="recommend">
           <h1>Recommend Recipe</h1>

@@ -1,3 +1,4 @@
+{/* eslint-disable-next-line*/}
 import React, { useEffect } from "react";
 import config from "./config.json";
 import Quagga from "quagga";
@@ -17,7 +18,9 @@ const Scanner = props => {
     });
 
     //detecting boxes on stream
+    {/* eslint-disable-next-line*/}
     Quagga.onProcessed(result => {
+       {/* eslint-disable-next-line*/}
       var drawingCtx = Quagga.canvas.ctx.overlay,
         drawingCanvas = Quagga.canvas.dom.overlay;
 
@@ -58,8 +61,9 @@ const Scanner = props => {
         }
       }
     });
-
+{/* eslint-disable-next-line*/}
     Quagga.onDetected(detected);
+{/* eslint-disable-next-line*/}
   }, []);
 
   const detected = result => {
