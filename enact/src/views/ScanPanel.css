@@ -1,8 +1,8 @@
 .App {
   font-family: sans-serif;
   text-align: center;
-  /* height: 600px;
-  width: 1000px; */
+  height: 1200px;
+  width: 1200px;
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -13,16 +13,16 @@
 }
 .container,
 #interactive.viewport {
-  width: 2000px;
-  height: 2000px;
+  width: 1200px;
+  height: 800px;
   margin: 0;
   padding: 0;
 }
 
 #interactive.viewport canvas,
 video {
-  width: 2000px;
-  height: 2000px;
+  width: 1200px;
+  height: 800px;
   position: absolute;
   top: 0;
   left: 0;
@@ -30,6 +30,6 @@ video {
 
 #interactive.viewport canvas.drawingBuffer,
 video.drawingBuffer {
-  width: 2000px;
-  height: 2000px;
+  width: 1200px;
+  height: 800px;
 }

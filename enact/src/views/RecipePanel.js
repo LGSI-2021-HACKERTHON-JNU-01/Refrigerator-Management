@@ -11,9 +11,13 @@ import RecipeDetails from '../components/RecipeDetails';
 import Alert from '../components/Alert';
 import Scroller from '@enact/sandstone/Scroller';
 import RandomMeal from '../components/Random';
+<<<<<<< HEAD
  /* eslint-disable-next-line*/
+=======
+// eslint-disable-next-line
+>>>>>>> ef44d984c9c55680de1c47d47ebaa3820a1cd434
 import Meal from '../components/Meal';
-
+//import RecommendRecipe from '../components/RecommendRecipe';
 function App() {
   const [query, setQuery] = useState('');
   const [recipes, setRecipes] = useState([]);
@@ -45,23 +49,38 @@ function App() {
     e.preventDefault();
     getData();
   };
+<<<<<<< HEAD
  /* eslint-disable-next-line*/
   const onScrollStop = ({scrollBottom, scrollTop}) => {
+=======
+  // eslint-disable-next-line
+  const onScrollStop = ({ scrollBottom, scrollTop }) => {
+>>>>>>> ef44d984c9c55680de1c47d47ebaa3820a1cd434
     // do something with scrollBottom and scrollTop
-  }
-
+  };
 
   return (
     <Scroller>
+<<<<<<< HEAD
 
       <div className="App">
         <div className="recommend">
+=======
+      <div className="App1">
+        <div>
+>>>>>>> ef44d984c9c55680de1c47d47ebaa3820a1cd434
           <h1>Recommend Recipe</h1>
-            <div className="one"><RandomMeal /></div>
-            <div className="two"><RandomMeal /></div>
-            <div className="three"><RandomMeal /></div>
+          
+          <div className="one">
+            <RandomMeal />
+          </div>
+          <div className="two">
+            <RandomMeal />
+          </div>
+          <div className="three">
+            <RandomMeal />
+          </div>
         </div>
-        <div className="mar"/>
         <h1>Search Recipe</h1>
         {/* eslint-disable-next-line */}
         <form onSubmit={onSubmit} className="search-form">
@@ -77,7 +96,6 @@ function App() {
           />
           <input type="submit" value="Search" />
         </form>
-        <div className="ma"/>
         <div className="recipes">
           {recipes.map(recipe => (
             <RecipeDetails
@@ -95,3 +113,4 @@ function App() {
 }
 
 export default App;
+//<div>{RecommendedRecipe()}</div>
