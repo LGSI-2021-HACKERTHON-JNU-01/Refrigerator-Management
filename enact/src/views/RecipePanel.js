@@ -11,8 +11,14 @@ import RecipeDetails from '../components/RecipeDetails';
 import Alert from '../components/Alert';
 import Scroller from '@enact/sandstone/Scroller';
 import RandomMeal from '../components/Random';
+<<<<<<< HEAD
 /* eslint-disable-next-line*/
 // eslint-disable-next-line
+=======
+
+// eslint-disable-next-line
+
+>>>>>>> 9f2f29bbc590ca0060a596aaf0217be2dc97db24
 import Meal from '../components/Meal';
 //import RecommendRecipe from '../components/RecommendRecipe';
 function App() {
@@ -46,6 +52,10 @@ function App() {
     e.preventDefault();
     getData();
   };
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9f2f29bbc590ca0060a596aaf0217be2dc97db24
   // eslint-disable-next-line
   const onScrollStop = ({ scrollBottom, scrollTop }) => {
     // do something with scrollBottom and scrollTop

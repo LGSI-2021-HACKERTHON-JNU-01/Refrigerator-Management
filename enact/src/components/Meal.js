@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 {
   /* eslint-disable-next-line*/
 }
+=======
+
+>>>>>>> 9f2f29bbc590ca0060a596aaf0217be2dc97db24
 // eslint-disable-next-line
 import React from 'react';
 
