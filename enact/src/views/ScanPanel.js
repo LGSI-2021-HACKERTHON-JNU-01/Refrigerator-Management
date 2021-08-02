@@ -31,6 +31,8 @@ function ScanPanel() {
   const [POG_DAYCNT, setPOG_DAYCNT]=useState('');
   const [PRDLST_DCNM, setPRDLST_DCNM]=useState('');
 
+  const [date, setDate] = useState('');
+
   // eslint-disable-next-line
   const onDetected = result => {
     setResult(result);
@@ -65,6 +67,13 @@ function ScanPanel() {
     }
   }, [query]);
 
+const handleChange = ({target:{value}}) => setDate(value);
+
+const handleSubmit = (e) => {
+  e.preventDefault();
+  console.log('date : ${date}')
+};
+
   return (
     <div className="App">
       {/* <div>{setCamera(!camera)}</div> */}
@@ -77,7 +86,16 @@ function ScanPanel() {
         {/* eslint-disable-next-line */}
         {camera && <Scanner onDetected={onDetected} />}
       </div>
-      <input type="submit" placeholder="expirationDate"/>
+      <form onSubmit={handleSubmit}>
+        <input
+            type="text"
+            name="date"
+            value={date}
+            placeholder="expirationDate(2021.08.02)"
+            onChange={handleChange}
+          />
+          <button type="submit">submit</button>
+      </form>
       <div className='Product'>
         <ScanDetails 
           name = {PRDLST_NM}
