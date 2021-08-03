@@ -71,7 +71,7 @@ function ScanPanel() {
           expirationDate={POG_DAYCNT}
         />
       </div>
-      <ScanInput/>
+      {/* <ScanInput/> */}
     </div>
   );
 }
