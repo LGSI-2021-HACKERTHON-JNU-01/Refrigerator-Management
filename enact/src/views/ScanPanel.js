@@ -86,7 +86,7 @@ const handleSubmit = (e) => {
         {/* eslint-disable-next-line */}
         {camera && <Scanner onDetected={onDetected} />}
       </div>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="searchForm">
         <input
             type="text"
             name="date"
