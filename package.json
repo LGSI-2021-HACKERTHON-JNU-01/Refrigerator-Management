@@ -16,10 +16,6 @@
     "mongodb": "^3.6.10",
     "mongoose": "^5.13.3",
     "prettier": "2.3.2",
-<<<<<<< HEAD
-    "s": "^1.0.0"
-=======
     "react-google-calendar-api": "^1.4.0"
->>>>>>> 6c6d663d1d00181ab430054569c9ddf6ac4a1a06
   }
 }

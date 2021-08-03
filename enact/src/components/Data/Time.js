@@ -4,7 +4,11 @@ const Time = () => {
   const year = today.getFullYear();
   const month = today.getMonth() + 1;
   const date = today.getDate();
-  const time = year + month + date;
+  // year = toString();
+  // month = toString();
+  // date = toString();
+
+  const time = `${month}/${date}/${year}`;
 
   return time;
 };
