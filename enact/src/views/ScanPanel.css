@@ -1,7 +1,7 @@
-.App {
+.App2 {
   font-family: sans-serif;
   text-align: center;
-  height: 12000px;
+  height: 10000px;
   width: 1200px;
   margin: 0;
   padding: 0;
@@ -23,7 +23,7 @@
 #interactive.viewport canvas,
 video {
   width: 1200px;
-  height: 12000px;
+  height: 800px;
   position: absolute;
   top: 0;
   left: 0;

@@ -49,11 +49,11 @@ function ScanPanel() {
     return() => {
         completed = true
     }
-  }, [query]);
+  });
 
 // const handleChange = ({target:{value}}) => setDate(value)
   return (
-    <div className="App">
+    <div className="App2">
       {/* <div>{setCamera(!camera)}</div> */}
       {/* eslint-disable-next-line */}
       <Button size="small" onClick={() => setCamera(!camera)}>
@@ -62,7 +62,7 @@ function ScanPanel() {
       {/* eslint-disable-next-line */}
       <div className="container">
         {/* eslint-disable-next-line */}
-        {camera && <Scanner onDetected={onDetected} />}
+        {camera && <Scanner onDetected={onDetected}/>}
       </div>
       <div className='Product'>
         <ScanDetails
@@ -76,6 +76,6 @@ function ScanPanel() {
   );
 }
 
-const rootElement = document.getElementById('root');
-ReactDOM.render(<ScanPanel />, rootElement);
+// const rootElement = document.getElementById('root');
+// ReactDOM.render(<ScanPanel />, rootElement);
 export default ScanPanel;
