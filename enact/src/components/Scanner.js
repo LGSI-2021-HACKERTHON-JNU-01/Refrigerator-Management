@@ -1,29 +1,26 @@
-// eslint-disable-next-line
-import React, { useEffect } from 'react';
-import config from './config.json';
-// import Quagga from "../../../barcodeapi/quagga";
-import Quagga from 'quagga';
+import { useEffect } from "react";
+import config from "./config.json";
+import Quagga from "quagga";
 
 const Scanner = props => {
   const { onDetected } = props;
-
+  const detected = result => {
+    onDetected(result.codeResult.code);
+  };
   useEffect(() => {
     Quagga.init(config, err => {
       if (err) {
-        console.log(err, 'error msg');
+        console.log(err, "error msg");
       }
       Quagga.start();
       return () => {
-        Quagga.stop();
-      };
+        Quagga.stop()
+      }
     });
-    // eslint-disable-next-line
-    Quagga.onDetected(detected);
+
     //detecting boxes on stream
-    {/* eslint-disable-next-line*/}
     Quagga.onProcessed(result => {
-      // eslint-disable-next-line
-      var drawingCtx = Quagga.canvas.ctx.overlay,
+      let drawingCtx = Quagga.canvas.ctx.overlay,
         drawingCanvas = Quagga.canvas.dom.overlay;
 
       if (result) {
@@ -31,46 +28,40 @@ const Scanner = props => {
           drawingCtx.clearRect(
             0,
             0,
-            Number(drawingCanvas.getAttribute('width')),
-            Number(drawingCanvas.getAttribute('height')),
+            Number(drawingCanvas.getAttribute("width")),
+            Number(drawingCanvas.getAttribute("height"))
           );
           result.boxes
-            .filter(function (box) {
+            .filter(function(box) {
               return box !== result.box;
             })
-            .forEach(function (box) {
+            .forEach(function(box) {
               Quagga.ImageDebug.drawPath(box, { x: 0, y: 1 }, drawingCtx, {
-                color: 'green',
-                lineWidth: 2,
+                color: "green",
+                lineWidth: 2
               });
             });
         }
 
         if (result.box) {
           Quagga.ImageDebug.drawPath(result.box, { x: 0, y: 1 }, drawingCtx, {
-            color: '#00F',
-            lineWidth: 2,
+            color: "#00F",
+            lineWidth: 2
           });
         }
+
         if (result.codeResult && result.codeResult.code) {
           Quagga.ImageDebug.drawPath(
             result.line,
-            { x: 'x', y: 'y' },
+            { x: "x", y: "y" },
             drawingCtx,
-            { color: 'red', lineWidth: 3 },
+            { color: "red", lineWidth: 3 }
           );
         }
       }
     });
-
-    // Quagga.onDetected(detected);
-    // eslint-disable-next-line
-
+    Quagga.onDetected(detected);
   }, []);
-
-  const detected = result => {
-    onDetected(result.codeResult.code);
-  };
 
   return (
     // If you do not specify a target,

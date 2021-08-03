@@ -23,7 +23,7 @@
 #interactive.viewport canvas,
 video {
   width: 1200px;
-  height: 800px;
+  height: 12000px;
   position: absolute;
   top: 0;
   left: 0;
@@ -36,13 +36,13 @@ video.drawingBuffer {
 }
 
 .Product {
-  font-size: 0.5rem;
+  font-size: 0.7rem;
   color: #000;
   font-family: sans-serif;
   text-align: center;
   background-color: #fff;
   border-radius: 0.3rem;
-  height: 500px;
+  height: 250px;
   width: 1200px;
   margin: 0;
   padding: 100;
@@ -54,6 +54,37 @@ video.drawingBuffer {
   width: calc(100% - 0.7rem);
   border-radius: 0.3rem;
   padding: 0.021rem; */
+}
+/* .searchForm {
+  width: 1200px;
+  height : 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d3d3d3;
+  border-radius: 0.5rem;
+  margin-bottom: 5rem;
+  position: relative;
+} */
+.searchForm input{
+  font-size: 0.8rem;
+  border: none;
+  border-bottom: 0.1rem solid #ccc;
+  margin: 0 0.5rem;
+  border-radius: 0.5rem;
+  height: 2rem;
+}
+
+.searchForm input[type="text"] {
+  padding: 0 0.5rem;
+  width: 45%;
+  color: #555;
+}
+.searchForm input[type="submit"] {
+  width: 12%;
+  text-transform: uppercase;
+  background-color: #8ca6db;
+  color: #fff;
 }
 /* 
 .Product h3 {
