@@ -1,5 +1,4 @@
 import CheckboxItem from '@enact/sandstone/CheckboxItem';
-import ScanDetails from './ScanDetails';
 
 const ShowList = ({ name, number, expirationDate }) => {
   return (
