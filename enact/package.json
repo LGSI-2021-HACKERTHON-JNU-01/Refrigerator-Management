@@ -1,5 +1,4 @@
 {
-
   "name": "enact",
   "version": "1.0.0",
   "description": "A general template for an Enact Sandstone application for webOS TVs",
@@ -46,20 +45,33 @@
     "@enact/ui": "^4.0.0",
     "@enact/webos": "^3.5.0",
     "@ericz1803/react-google-calendar": "^4.2.1",
+    "@tensorflow/tfjs": "^3.8.0",
     "axios": "^0.21.1",
+    "browser-env": "^3.3.0",
+    "child_process": "^1.0.2",
+    "d3": "^7.0.0",
+    "dist": "^0.1.2",
     "firebase": "^8.8.1",
-
     "firebase-admin": "^9.11.0",
-
+    "forever-agent": "^0.6.1",
+    "http-proxy-agent": "^4.0.1",
+    "https-proxy-agent": "^5.0.0",
     "ilib": "npm:ilib-webos@^14.6.2-webos1",
+    "jsdom": "^16.7.0",
+    "living": "^1.0.1",
+    "ml5": "^0.6.1",
     "prop-types": "^15.6.2",
     "quagga": "^0.12.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-google-calendar-api": "^1.4.0",
     "react-router-dom": "^5.2.0",
+    "react-script-tag": "^1.1.2",
     "react-webcam": "^5.2.4",
-    "rxjs": "^7.3.0"
+    "resize-observer-polyfill": "^1.5.1",
+    "rxjs": "^7.3.0",
+    "xhr": "^2.6.0",
+    "xmlhttprequest": "^1.8.0"
   },
   "devDependencies": {
     "eslint": "^7.31.0",
