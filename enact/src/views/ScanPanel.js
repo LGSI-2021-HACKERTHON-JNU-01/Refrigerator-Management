@@ -6,18 +6,20 @@ import axios from 'axios';
 
 import './ScanPanel.css';
 import ScanDetails from '../components/ScanDetails.js';
-import ScanInput from '../components/ScanInput.js'
+import ScanInput from '../components/ScanInput.js';
 
 function ScanPanel() {
   const [camera, setCamera] = useState(false);
-  const [result, setResult] = useState('');//null
+  const [result, setResult] = useState(''); //null
 
   const [BAR_CD, setData] = useState('');
-  const [query, setQuery] = useState('');//8809359120061
-  const open_url = 'http://openapi.foodsafetykorea.go.kr/api/sample/C005/json/1/5/BAR_CD='+query;
+  const [query, setQuery] = useState(''); //8809359120061
+  const open_url =
+    'http://openapi.foodsafetykorea.go.kr/api/sample/C005/json/1/5/BAR_CD=' +
+    query;
 
-  const [PRDLST_NM, setPRDLST_NM]=useState('');
-  const [POG_DAYCNT, setPOG_DAYCNT]=useState('');
+  const [PRDLST_NM, setPRDLST_NM] = useState('');
+  const [POG_DAYCNT, setPOG_DAYCNT] = useState('');
 
   // eslint-disable-next-line
   const onDetected = result => {
@@ -25,33 +27,32 @@ function ScanPanel() {
     setQuery(result);
   };
 
-  useEffect(()=> {
+  useEffect(() => {
     let completed = false; //query, Variables to ensure search results are complete
-    const get = async () =>{
-      if(!completed){
-      // if(query!==''){
+    const get = async () => {
+      if (!completed) {
+        // if(query!==''){
         let respon = await axios(open_url);
-        if(respon.data.C005.RESULT.CODE === 'INFO-000'){
+        if (respon.data.C005.RESULT.CODE === 'INFO-000') {
           // setData(respon.data.C005.row[0]);
           setData(respon.data.C005.row[0].BAR_CD);
-          setPRDLST_NM("<"+respon.data.C005.row[0].PRDLST_NM+">");
+          setPRDLST_NM('<' + respon.data.C005.row[0].PRDLST_NM + '>');
           setPOG_DAYCNT(respon.data.C005.row[0].POG_DAYCNT);
-        }
-        else{
+        } else {
           // setAlert('');
           setData(result);
           setPRDLST_NM('No match data');
           setPOG_DAYCNT('');
         }
       }
-    }
-    get()
-    return() => {
-        completed = true
-    }
+    };
+    get();
+    return () => {
+      completed = true;
+    };
   });
 
-// const handleChange = ({target:{value}}) => setDate(value)
+  // const handleChange = ({target:{value}}) => setDate(value)
   return (
     <div className="App2">
       {/* <div>{setCamera(!camera)}</div> */}
@@ -62,12 +63,12 @@ function ScanPanel() {
       {/* eslint-disable-next-line */}
       <div className="container">
         {/* eslint-disable-next-line */}
-        {camera && <Scanner onDetected={onDetected}/>}
+        {camera && <Scanner onDetected={onDetected} />}
       </div>
-      <div className='Product'>
+      <div className="Product">
         <ScanDetails
-          name = {PRDLST_NM}
-          barcode = {BAR_CD}
+          name={PRDLST_NM}
+          barcode={BAR_CD}
           expirationDate={POG_DAYCNT}
         />
       </div>

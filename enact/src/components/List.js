@@ -1,13 +1,18 @@
-import kind from '@enact/core/kind';
-import BodyText from '@enact/sandstone/BodyText';
-import FetchData from '../components/Data/FetchData';
+import CheckboxItem from '@enact/sandstone/CheckboxItem';
+import ScanDetails from './ScanDetails';
 
-const List = kind({
-  name: 'List',
+const ShowList = ({ name, number, expirationDate }) => {
+  return (
+    <div>
+      <hr />
+      <CheckboxItem onToggle={console.log}>
+        <div className="item">
+          {name} {number} {expirationDate}
+        </div>
+      </CheckboxItem>
+      <hr />
+    </div>
+  );
+};
 
-  render: () => (
-    <BodyText>
-      <FetchData />
-    </BodyText>
-  ),
-});
+export default ShowList;
