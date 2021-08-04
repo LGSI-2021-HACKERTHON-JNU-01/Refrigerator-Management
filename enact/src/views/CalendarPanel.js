@@ -1,44 +1,51 @@
 import React from 'react';
-import Calendar from '@ericz1803/react-google-calendar';
-import { css, withTheme } from '@emotion/react';
-//import { Injectable } from '@angular/core';
-//import { Observable } from 'rxjs';
-//import { AngularFireAuth } from '@angular/fire/auth';
-//import { auth } from 'firebase/app';
+import FullCalendar from '@fullcalendar/react';
+import dayGridPlugin from '@fullcalendar/daygrid';
+import googleCalendarPlugin from '@fullcalendar/google-calendar';
+import Scroller from '@enact/sandstone/Scroller';
+import timeGridPlugin from '@fullcalendar/timegrid';
+import interactionPlugin from '@fullcalendar/interaction';
 
-const API_KEY = 'AIzaSyCpC0bTrytCsEVyVZDKrHK1_1h5RloRYWc';
+export default function CalendarApp({ name, expirationDate }) {
+  const calEventSources = [
+    {
+      googleCalendarId: 'hkhh972123@google.com',
+      backgroundColor: '#f5dfe2',
+      rendering: 'background',
+    },
+  ];
 
-let calendars = [{ calendarId: 'hkhh972123@gmail.com' }];
+  const event = {
+    title: { name },
+    end: { expirationDate },
+  };
 
-let styles = {
-  calendar: {
-    borderWidth: '3px',
-    width: '80%',
-    paddingTop: '33px',
-    paddingBottom: '53px',
-    margin: 'auto',
-    maxWidth: '900px',
-    color: '#EFFBEF',
-  },
-
-  eventText: {
-    color: '#EFFBEF',
-  },
-
-  today: css`
-    color: red;
-    border: 3px solid red;
-  `,
-};
-
-export default function App() {
   return (
-    <div className="calendar">
-      <body>
-        <div>
-          <Calendar apiKey={API_KEY} calendars={calendars} styles={styles} />
+    <Scroller>
+      <div className="CalendarApp">
+        <div className="Calendar">
+          <FullCalendar
+            defaultView="dayGridMonth"
+            headerToolbar={{
+              left: 'prev,next',
+              center: 'title',
+              right: 'dayGridMonth,timeGridWeek,timeGridDay',
+            }}
+            plugins={[
+              dayGridPlugin,
+              timeGridPlugin,
+              interactionPlugin,
+              googleCalendarPlugin,
+            ]}
+            eventSources={calEventSources}
+            googleCalendarApiKey={'AIzaSyCpC0bTrytCsEVyVZDKrHK1_1h5RloRYWc'}
+            eventBackgroundColor={'#ffd0c682'}
+            eventBorderColor={'#fba28ed6'}
+            eventTextColor={'transparent'}
+            events={event}
+          />
         </div>
-      </body>
-    </div>
+      </div>
+    </Scroller>
   );
 }
