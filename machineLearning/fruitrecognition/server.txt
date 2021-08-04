@@ -1,0 +1,3 @@
+d:
+cd D:\kaggleDataset\fruitrecognition
+python -m SimpleHTTPServer 7000
