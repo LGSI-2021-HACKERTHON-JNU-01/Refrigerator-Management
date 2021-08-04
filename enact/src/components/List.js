@@ -1,11 +1,17 @@
-import kind from '@enact/core/kind';
-import Scroller from '@enact/sandstone/Scroller';
+import CheckboxItem from '@enact/sandstone/CheckboxItem';
 
-import getData from '../../../server/javascriptservice/controllers/GetData';
-import deleteData from '../../../server/javascriptservice/controllers/DeleteData';
+const ShowList = ({ name, number, expirationDate }) => {
+  return (
+    <div>
+      <hr />
+      <CheckboxItem onToggle={console.log}>
+        <div className="item">
+          {name} {number} {expirationDate}
+        </div>
+      </CheckboxItem>
+      <hr />
+    </div>
+  );
+};
 
-const List = kind({
-  name: 'List',
-
-  render: () => <Scroller></Scroller>,
-});
+export default ShowList;

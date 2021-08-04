@@ -1,4 +1,3 @@
-
 // eslint-disable-next-line
 import React from 'react';
 
@@ -16,15 +15,18 @@ const Meal = ({ meal }) => {
           {strInstructions && strInstructions.substr(0, 150) + '...'}
         </p>
         <ul className="meal-info">
+          {/* eslint-disable-next-line*/}
           <li>
             Category
             <strong>{strCategory}</strong>
+            {/* eslint-disable-next-line*/}
           </li>
+          {/* eslint-disable-next-line*/}
           <li>
             Area
             <strong>{strArea}</strong>
           </li>
-          {/* eslint-disable-next-line */}
+          {/* eslint-disable-next-line*/}
           <div></div>
         </ul>
       </div>
