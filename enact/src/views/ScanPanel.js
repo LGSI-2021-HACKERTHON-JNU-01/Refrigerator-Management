@@ -7,6 +7,7 @@ import axios from 'axios';
 import './ScanPanel.css';
 import ScanDetails from '../components/ScanDetails.js';
 import ScanInput from '../components/ScanInput.js';
+import ScanTag from '../components/ScanTag.js';
 
 function ScanPanel() {
   const [camera, setCamera] = useState(false);
@@ -72,7 +73,8 @@ function ScanPanel() {
           expirationDate={POG_DAYCNT}
         />
       </div>
-      {/* <ScanInput/> */}
+      <ScanInput/>
+      <ScanTag/>
     </div>
   );
 }
