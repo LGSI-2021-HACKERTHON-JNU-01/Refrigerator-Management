@@ -12,6 +12,7 @@ export default function CalendarApp({ name, expirationDate }) {
       googleCalendarId: 'hkhh972123@google.com',
       backgroundColor: '#f5dfe2',
       rendering: 'background',
+      textColor: '#FFFFFF',
     },
   ];
 
@@ -19,6 +20,11 @@ export default function CalendarApp({ name, expirationDate }) {
     title: { name },
     end: { expirationDate },
   };
+
+  const events = [
+    { title: 'apple', date: new Date('2021/09/03') },
+    { title: 'plum', date: new Date('2021-08-23') },
+  ];
 
   return (
     <Scroller>
@@ -37,12 +43,20 @@ export default function CalendarApp({ name, expirationDate }) {
               interactionPlugin,
               googleCalendarPlugin,
             ]}
+            editable={true}
             eventSources={calEventSources}
             googleCalendarApiKey={'AIzaSyCpC0bTrytCsEVyVZDKrHK1_1h5RloRYWc'}
-            eventBackgroundColor={'#ffd0c682'}
-            eventBorderColor={'#fba28ed6'}
-            eventTextColor={'transparent'}
-            events={event}
+            events={events}
+            eventDrop={info => {
+              const { start, end } = info.oldEvent._instance.range;
+              console.log(start, end);
+              const { start: newStart, end: newEnd } =
+                info.event._instance.range;
+              console.log(newStart, newEnd);
+              if (new Date(start).getDate() === new Date(newStart).getDate()) {
+                info.revert();
+              }
+            }}
           />
         </div>
       </div>
